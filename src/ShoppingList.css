@@ -1,0 +1,99 @@
+.shopping-list-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+}
+
+.error {
+  color: red;
+}
+
+.add-item-form, .edit-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-item-form input, .edit-form input {
+  padding: 8px;
+  flex: 1;
+}
+
+.add-item-form button, .edit-form button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-form button:last-of-type {
+  background-color: #f44336;
+}
+
+.items-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.item.purchased {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.item button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.item button:nth-of-type(1) {
+  background-color: #2196F3;
+  color: white;
+}
+
+.item button:nth-of-type(2) {
+  background-color: #FFC107;
+  color: black;
+}
+
+.item button:nth-of-type(3) {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Mobil görünüm */
+@media (max-width: 600px) {
+  .add-item-form, .edit-form {
+    flex-direction: column;
+  }
+  
+  .item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .item div {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+  
+  .edit-form {
+    width: 100%;
+  }
+}
